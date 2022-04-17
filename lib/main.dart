@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jpi_app/utils/Colors.dart';
 import 'package:jpi_app/widgets/custom_bottom_navigation.dart';
 
 void main() {
@@ -13,8 +14,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      title: 'JPI',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
       home: CustomBottomNavigationBar(),
     );

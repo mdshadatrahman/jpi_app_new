@@ -21,5 +21,4 @@ class AppColors {
   static const green = Color(0xff04C773);
   static const button2 = Color(0xff81C5C4);
   static const button1 = Color(0xffEAA388);
-  // static const white = Color.fromARGB(255, 236, 236, 236);
 }

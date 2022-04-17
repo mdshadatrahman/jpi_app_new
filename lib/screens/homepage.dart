@@ -37,12 +37,13 @@ class _HomeScreenState extends State<HomeScreen>
 
   @override
   Widget build(BuildContext context) {
-    List<String> offerImages = [
-      'assets/images/offer1.jpeg',
-      'assets/images/offer.jpeg',
-      'assets/images/offer3.jpeg',
-      'assets/images/offer2.jpeg',
-      'assets/images/offer4.png',
+    List<String> collegeGallery = [
+      'assets/jpi1.jpeg',
+      'assets/jpi2.jpg',
+      'assets/jpi3.jpeg',
+      'assets/jpi4.jpeg',
+      'assets/jpi5.jpg',
+      'assets/jpi6.jpeg',
     ];
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
@@ -122,84 +123,40 @@ class _HomeScreenState extends State<HomeScreen>
                         right: width / 15,
                         top: height / 35,
                       ),
-                      child: Column(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              GestureDetector(
-                                onTap: () {
-                                  _key.currentState!.openDrawer();
-                                },
-                                child: Icon(
-                                  Icons.sort,
-                                  color: Colors.white,
-                                  size: 36,
-                                ),
+                              SizedBox(height: height * 0.05),
+
+                              Container(
+                                height: width * 0.2,
+                                width: width * 0.2,
+                                child: Image.asset('assets/jpi_logo.png'),
                               ),
+                              SizedBox(height: height * 0.02),
                               Text(
-                                'Total Points 100',
+                                'Jashore Polytechnic Institute',
                                 style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 18,
+                                  fontSize: 24,
                                   fontWeight: FontWeight.w700,
                                 ),
                               ),
-                              GestureDetector(
-                                onTap: () {
-                                  Get.to(() => ProfileScreen());
-                                },
-                                child: CircleAvatar(
-                                  radius: 20,
-                                  backgroundImage: NetworkImage(
-                                    'https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
-                                  ),
-                                ),
-                              )
+                              // GestureDetector(
+                              //   onTap: () {
+                              //     _key.currentState!.openDrawer();
+                              //   },
+                              //   child: Icon(
+                              //     Icons.sort,
+                              //     color: Colors.white,
+                              //     size: 36,
+                              //   ),
+                              // ),
                             ],
                           ),
-                          SizedBox(height: height / 15),
-                          //Search bar
-
-                          Container(
-                            height: height / 17,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.white,
-                            ),
-                            child: Row(
-                              children: [
-                                Container(
-                                  padding: EdgeInsets.only(
-                                    top: height * 0.001,
-                                    left: width * 0.05,
-                                  ),
-                                  height: height / 13,
-                                  width: width / 1.6,
-                                  child: TextField(
-                                    decoration: InputDecoration(
-                                      border: InputBorder.none,
-                                      hintText: 'Search',
-                                      hintStyle: TextStyle(
-                                        color: Color(0x456C8B80),
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(width: width * 0.05),
-                                Icon(
-                                  Icons.search,
-                                  size: 30,
-                                  color: AppColors.blackH1,
-                                ),
-                                SizedBox(width: width * 0.01),
-                                Icon(
-                                  Icons.tune,
-                                ),
-                              ],
-                            ),
-                          )
                         ],
                       ),
                     ),
@@ -243,7 +200,7 @@ class _HomeScreenState extends State<HomeScreen>
                                       child: Padding(
                                         padding: EdgeInsets.all(width * 0.02),
                                         child: Icon(
-                                          Icons.task,
+                                          Icons.computer,
                                           color: Colors.white,
                                         ),
                                       ),
@@ -254,7 +211,7 @@ class _HomeScreenState extends State<HomeScreen>
                                         right: width * 0.025,
                                       ),
                                       child: Text(
-                                        'Tasks',
+                                        'Depts',
                                         style: TextStyle(
                                           fontSize: 14,
                                           color: Colors.white,
@@ -302,7 +259,7 @@ class _HomeScreenState extends State<HomeScreen>
                                         child: Padding(
                                           padding: EdgeInsets.all(width * 0.02),
                                           child: Icon(
-                                            Icons.point_of_sale,
+                                            Icons.book_outlined,
                                             color: Colors.white,
                                           ),
                                         ),
@@ -313,7 +270,7 @@ class _HomeScreenState extends State<HomeScreen>
                                           right: width * 0.025,
                                         ),
                                         child: Text(
-                                          'Points',
+                                          'Libraries',
                                           style: TextStyle(
                                             fontSize: 14,
                                             color: Colors.white,
@@ -361,14 +318,14 @@ class _HomeScreenState extends State<HomeScreen>
                                         child: Padding(
                                           padding: EdgeInsets.all(width * 0.02),
                                           child: Icon(
-                                            Icons.history,
+                                            Icons.sports_cricket_outlined,
                                             color: Colors.white,
                                           ),
                                         ),
                                       ),
                                       Container(
                                         child: Text(
-                                          'History',
+                                          'Extracurricular',
                                           style: TextStyle(
                                             fontSize: 14,
                                             color: Colors.white,
@@ -412,12 +369,12 @@ class _HomeScreenState extends State<HomeScreen>
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Icon(
-                                    Icons.local_atm,
+                                    Icons.home_work_outlined,
                                     size: 30,
                                     color: Color.fromARGB(255, 185, 81, 40),
                                   ),
                                   Text(
-                                    'Get Points',
+                                    'Internal Results',
                                     style: TextStyle(
                                       color: Color.fromARGB(255, 185, 81, 40),
                                       fontSize: 12,
@@ -454,12 +411,12 @@ class _HomeScreenState extends State<HomeScreen>
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Icon(
-                                    Icons.local_activity_outlined,
+                                    Icons.public,
                                     size: 30,
                                     color: Color.fromARGB(255, 185, 81, 40),
                                   ),
                                   Text(
-                                    'Buy Voucher/Coupon',
+                                    'Board Results',
                                     style: TextStyle(
                                       color: Color.fromARGB(255, 185, 81, 40),
                                       fontSize: 12,
@@ -487,7 +444,7 @@ class _HomeScreenState extends State<HomeScreen>
                     left: width / 15,
                   ),
                   child: Text(
-                    'Our offers',
+                    'Our Institute',
                     textAlign: TextAlign.right,
                     style: TextStyle(
                       fontSize: 24,
@@ -504,14 +461,14 @@ class _HomeScreenState extends State<HomeScreen>
                     Get.to(() => details());
                   },
                   child: Container(
-                    height: MediaQuery.of(context).size.height / 7,
+                    height: MediaQuery.of(context).size.height / 4,
                     child: CarouselSlider.builder(
                       options: CarouselOptions(
                         scrollDirection: Axis.horizontal,
                         scrollPhysics: AlwaysScrollableScrollPhysics(),
                         height: 200,
                         autoPlay: true,
-                        reverse: true,
+                        reverse: false,
                         enlargeCenterPage: true,
                         viewportFraction: 0.9,
                       ),
@@ -524,21 +481,10 @@ class _HomeScreenState extends State<HomeScreen>
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                            image: AssetImage(offerImages[itemIndex]),
+                            image: AssetImage(collegeGallery[itemIndex]),
                             fit: BoxFit.cover,
                           ),
                         ),
-                        // child: InkWell(
-                        //
-                        //     onTap: ()async{
-                        //       // var url=snapshot.data[itemIndex]['links'];
-                        //       // if (await canLaunch(url))
-                        //       //   await launch(url);
-                        //       // else
-                        //       //   // can't launch url, there is some error
-                        //       //   throw "Could not launch $url";
-                        //     },
-                        //     child:Image.asset('assets/images/b.jpg',width: width,))
                       ),
                     ),
                   ),
@@ -549,7 +495,7 @@ class _HomeScreenState extends State<HomeScreen>
                     left: width / 15,
                   ),
                   child: Text(
-                    'Categories For You',
+                    'All Departments',
                     style: TextStyle(
                       color: AppColors.blackH1,
                       fontSize: 18,
@@ -565,74 +511,67 @@ class _HomeScreenState extends State<HomeScreen>
                         EdgeInsets.only(left: width / 15, bottom: width / 15),
                     child: Row(
                       children: [
-                        //Restaurants
-                        GestureDetector(
-                          onTap: () {
-                            Get.to(() => RestaurantsList());
-                          },
-                          child: Padding(
-                            padding: EdgeInsets.only(top: height * 0.02),
-                            child: Container(
-                              height: width * 0.3,
-                              width: width * 0.3,
-                              decoration: BoxDecoration(
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Color.fromARGB(255, 146, 146, 146),
-                                    blurRadius: 1.0,
-                                    spreadRadius: 0.0,
-                                    offset: Offset(
-                                      1.0,
-                                      1.0,
-                                    ), // shadow direction: bottom right
-                                  )
+                        Padding(
+                          padding: EdgeInsets.only(top: height * 0.02),
+                          child: Container(
+                            height: width * 0.3,
+                            width: width * 0.3,
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Color.fromARGB(255, 146, 146, 146),
+                                  blurRadius: 1.0,
+                                  spreadRadius: 0.0,
+                                  offset: Offset(
+                                    1.0,
+                                    1.0,
+                                  ), // shadow direction: bottom right
+                                )
+                              ],
+                              // color: Colors.red,
+                              borderRadius: BorderRadius.circular(20),
+                              gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  Color.fromARGB(255, 247, 164, 145),
+                                  Color(0xffF5F5F5),
                                 ],
-                                // color: Colors.red,
-                                borderRadius: BorderRadius.circular(20),
-                                gradient: LinearGradient(
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.bottomCenter,
-                                  colors: [
-                                    Color.fromARGB(255, 247, 164, 145),
-                                    Color(0xffF5F5F5),
-                                  ],
-                                ),
                               ),
-                              child: Center(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      height: width * 0.15,
-                                      width: width * 0.15,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(12),
-                                        color: Color(0xffE5EDFF),
-                                      ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Image.asset(
-                                          'assets/images/rest.png',
-                                        ),
+                            ),
+                            child: Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    height: width * 0.15,
+                                    width: width * 0.15,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(12),
+                                      color: Color(0xffE5EDFF),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Image.asset(
+                                        'assets/civil.png',
                                       ),
                                     ),
-                                    SizedBox(height: height * 0.01),
-                                    Text(
-                                      'Restaurants',
-                                      style: TextStyle(
-                                        color: Color.fromARGB(255, 241, 92, 75),
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                    )
-                                  ],
-                                ),
+                                  ),
+                                  SizedBox(height: height * 0.01),
+                                  Text(
+                                    'Civil',
+                                    style: TextStyle(
+                                      color: Color.fromARGB(255, 241, 92, 75),
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  )
+                                ],
                               ),
                             ),
                           ),
                         ),
                         SizedBox(width: width / 15),
-                        //Groceries
                         Padding(
                           padding: EdgeInsets.only(top: height * 0.02),
                           child: Container(
@@ -674,14 +613,14 @@ class _HomeScreenState extends State<HomeScreen>
                                     child: Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: Image.asset(
-                                        'assets/images/cart.png',
+                                        'assets/computer.png',
                                         fit: BoxFit.cover,
                                       ),
                                     ),
                                   ),
                                   SizedBox(height: height * 0.01),
                                   Text(
-                                    'Groceries',
+                                    'Computer',
                                     style: TextStyle(
                                       color: Color(0xff80A100),
                                       fontSize: 16,
@@ -694,7 +633,6 @@ class _HomeScreenState extends State<HomeScreen>
                           ),
                         ),
                         SizedBox(width: width / 15),
-                        //Food Delivery
                         Padding(
                           padding: EdgeInsets.only(top: height * 0.02),
                           child: Container(
@@ -712,7 +650,6 @@ class _HomeScreenState extends State<HomeScreen>
                                   ), // shadow direction: bottom right
                                 )
                               ],
-                              // color: Colors.red,
                               borderRadius: BorderRadius.circular(20),
                               gradient: LinearGradient(
                                 begin: Alignment.topCenter,
@@ -737,15 +674,255 @@ class _HomeScreenState extends State<HomeScreen>
                                     child: Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: Image.asset(
-                                        'assets/images/delivery.png',
+                                        'assets/electrical.png',
                                       ),
                                     ),
                                   ),
                                   SizedBox(height: height * 0.01),
                                   Text(
-                                    'Food Delivery',
+                                    'Electrical',
                                     style: TextStyle(
                                       color: Color(0xffF7CA49),
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: width / 15),
+                        Padding(
+                          padding: EdgeInsets.only(top: height * 0.02),
+                          child: Container(
+                            height: width * 0.3,
+                            width: width * 0.3,
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Color.fromARGB(255, 146, 146, 146),
+                                  blurRadius: 1.0,
+                                  spreadRadius: 0.0,
+                                  offset: Offset(
+                                    1.0,
+                                    1.0,
+                                  ),
+                                )
+                              ],
+                              borderRadius: BorderRadius.circular(20),
+                              gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  Color.fromARGB(255, 255, 186, 181),
+                                  Color(0xffF5F5F5),
+                                ],
+                              ),
+                            ),
+                            child: Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    height: width * 0.15,
+                                    width: width * 0.15,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(12),
+                                      color: Color(0xffE5EDFF),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Image.asset(
+                                        'assets/electronics.png',
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: height * 0.01),
+                                  Text(
+                                    'Electronics',
+                                    style: TextStyle(
+                                      color: Color.fromARGB(255, 247, 73, 73),
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: width / 15),
+                        Padding(
+                          padding: EdgeInsets.only(top: height * 0.02),
+                          child: Container(
+                            height: width * 0.3,
+                            width: width * 0.3,
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Color.fromARGB(255, 146, 146, 146),
+                                  blurRadius: 1.0,
+                                  spreadRadius: 0.0,
+                                  offset: Offset(
+                                    1.0,
+                                    1.0,
+                                  ), // shadow direction: bottom right
+                                )
+                              ],
+                              borderRadius: BorderRadius.circular(20),
+                              gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  Color.fromARGB(255, 190, 216, 245),
+                                  Color(0xffF5F5F5),
+                                ],
+                              ),
+                            ),
+                            child: Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    height: width * 0.15,
+                                    width: width * 0.15,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(12),
+                                      color: Color(0xffE5EDFF),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Image.asset(
+                                        'assets/mechanical.png',
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: height * 0.01),
+                                  Text(
+                                    'Mechanical',
+                                    style: TextStyle(
+                                      color: Color.fromARGB(255, 73, 120, 247),
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: width / 15),
+                        Padding(
+                          padding: EdgeInsets.only(top: height * 0.02),
+                          child: Container(
+                            height: width * 0.3,
+                            width: width * 0.3,
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Color.fromARGB(255, 146, 146, 146),
+                                  blurRadius: 1.0,
+                                  spreadRadius: 0.0,
+                                  offset: Offset(
+                                    1.0,
+                                    1.0,
+                                  ), // shadow direction: bottom right
+                                )
+                              ],
+                              borderRadius: BorderRadius.circular(20),
+                              gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  Color.fromARGB(255, 245, 190, 231),
+                                  Color(0xffF5F5F5),
+                                ],
+                              ),
+                            ),
+                            child: Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    height: width * 0.15,
+                                    width: width * 0.15,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(12),
+                                      color: Color(0xffE5EDFF),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Image.asset(
+                                        'assets/power.png',
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: height * 0.01),
+                                  Text(
+                                    'Power',
+                                    style: TextStyle(
+                                      color: Color.fromARGB(255, 247, 73, 224),
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: width / 15),
+                        Padding(
+                          padding: EdgeInsets.only(top: height * 0.02),
+                          child: Container(
+                            height: width * 0.3,
+                            width: width * 0.3,
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Color.fromARGB(255, 146, 146, 146),
+                                  blurRadius: 1.0,
+                                  spreadRadius: 0.0,
+                                  offset: Offset(
+                                    1.0,
+                                    1.0,
+                                  ), // shadow direction: bottom right
+                                )
+                              ],
+                              borderRadius: BorderRadius.circular(20),
+                              gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  Color.fromARGB(255, 190, 234, 245),
+                                  Color(0xffF5F5F5),
+                                ],
+                              ),
+                            ),
+                            child: Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    height: width * 0.15,
+                                    width: width * 0.15,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(12),
+                                      color: Color(0xffE5EDFF),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Image.asset(
+                                        'assets/telecom.png',
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: height * 0.01),
+                                  Text(
+                                    'Telecom',
+                                    style: TextStyle(
+                                      color: Color.fromARGB(255, 73, 178, 247),
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                     ),
@@ -760,30 +937,6 @@ class _HomeScreenState extends State<HomeScreen>
                     ),
                   ),
                 ),
-
-                //Nearby Merchants
-                Padding(
-                  padding: EdgeInsets.only(left: width / 15),
-                  child: Text(
-                    'Nearby Merchants',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ),
-                SizedBox(height: height * 0.015),
-                //!Nearby Merchants tile
-                NearbyMerchantsTile(
-                    width: width,
-                    height: height,
-                    imageUrl: 'assets/images/uberEats.jpg'),
-                NearbyMerchantsTile(
-                  width: width,
-                  height: height,
-                  imageUrl: 'assets/images/foodpanda.jpeg',
-                ),
-                SizedBox(height: height * 0.015),
               ],
             ),
           ),

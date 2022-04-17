@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class NotificationScreen extends StatefulWidget {
-  const NotificationScreen({Key? key}) : super(key: key);
+class NoticeScreen extends StatefulWidget {
+  const NoticeScreen({Key? key}) : super(key: key);
 
   @override
-  State<NotificationScreen> createState() => _NotificationScreenState();
+  State<NoticeScreen> createState() => _NoticeScreenState();
 }
 
-class _NotificationScreenState extends State<NotificationScreen> {
+class _NoticeScreenState extends State<NoticeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text('Notifications')),
+      body: Center(child: Text('Notices')),
     );
   }
 }

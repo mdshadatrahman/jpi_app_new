@@ -15,12 +15,6 @@ class CustomBottomNavigationBar extends StatefulWidget {
 }
 
 class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
-  // final List<Widget> screens = [
-  //   const HomeScreen(),
-  //   const PointsPage(),
-  //   const OurOfferPage(),
-  //   const SettingsPage(),
-  // ];
   final PageStorageBucket bucket = PageStorageBucket();
   Widget currentScreen = const HomeScreen();
   int current_tab = 0;
@@ -77,222 +71,10 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         return true;
       },
       child: Scaffold(
-        // endDrawer: Drawer(
-        //   child: ListView(
-        //     padding: EdgeInsets.zero,
-        //     children: [
-        //       //  UserAccountsDrawerHeader(
-        //       //
-        //       //   currentAccountPicture: CircleAvatar(
-        //       //     backgroundImage: NetworkImage(
-        //       //       'https://i1.rgstatic.net/ii/profile.image/654463341694976-1533047628075_Q512/Abir-Rahman.jpg'
-        //       //     )
-        //       //   ),
-        //       //   accountEmail: Text('Abir1@example.com'),
-        //       //   accountName: InkWell(
-        //       //     onTap: (){
-        //       //       Navigator.push(context, MaterialPageRoute(builder: (_)=>school_profile()));
-        //       //
-        //       //     },
-        //       //     child: Text(
-        //       //       'Abir Rahman',
-        //       //       style: TextStyle(fontSize: 14),
-        //       //     ),
-        //       //   ),
-        //       //   decoration: BoxDecoration(
-        //       //     color: Colors.black87,
-        //       //   ),
-        //       // ),
-        //
-        //       ListTile(
-        //         leading: const Icon(Icons.logout),
-        //         title: const Text(
-        //           'Logout',
-        //           style: TextStyle(fontSize: 14),
-        //         ),
-        //         onTap: () async {
-        //           SharedPreferences prefs =
-        //           await SharedPreferences.getInstance();
-        //           prefs.clear();
-        //
-        //           Navigator.push(context,
-        //               MaterialPageRoute(builder: (_) => login_screen()));
-        //         },
-        //       ),
-        //
-        //       // ListTile(
-        //       //   leading: const Icon(Icons.house),
-        //       //   title: const Text(
-        //       //     'Class',
-        //       //     style: TextStyle(fontSize: 14),
-        //       //   ),
-        //       //   onTap: () {
-        //       //
-        //       //     Navigator.push(context, MaterialPageRoute(builder: (_)=>class_screen()));
-        //       //
-        //       //
-        //       //   },
-        //       // ),ListTile(
-        //       //   leading: const Icon(Icons.house),
-        //       //   title: const Text(
-        //       //     'Section',
-        //       //     style: TextStyle(fontSize: 14),
-        //       //   ),
-        //       //   onTap: () {
-        //       //
-        //       //     Navigator.push(context, MaterialPageRoute(builder: (_)=>section_screen()));
-        //       //
-        //       //
-        //       //   },
-        //       // )
-        //       //
-        //       // ,ListTile(
-        //       //   leading: const Icon(Icons.house),
-        //       //   title: const Text(
-        //       //     'Group',
-        //       //     style: TextStyle(fontSize: 14),
-        //       //   ),
-        //       //   onTap: () {
-        //       //
-        //       //     Navigator.push(context, MaterialPageRoute(builder: (_)=>group_screen()));
-        //       //
-        //       //
-        //       //   },
-        //       // )
-        //       // ,
-        //       // ListTile(
-        //       //   leading: const Icon(Icons.house),
-        //       //   title: const Text(
-        //       //     'Subject',
-        //       //     style: TextStyle(fontSize: 14),
-        //       //   ),
-        //       //   onTap: () {
-        //       //
-        //       //     Navigator.push(context, MaterialPageRoute(builder: (_)=>subject_screen()));
-        //       //
-        //       //
-        //       //   },
-        //       // )
-        //       // ,
-        //       // ListTile(
-        //       //   leading: const Icon(Icons.house),
-        //       //   title: const Text(
-        //       //     'Department',
-        //       //     style: TextStyle(fontSize: 14),
-        //       //   ),
-        //       //   onTap: () {
-        //       //
-        //       //     Navigator.push(context, MaterialPageRoute(builder: (_)=>dept_screen()));
-        //       //
-        //       //
-        //       //   },
-        //       // )
-        //       // ,ListTile(
-        //       //   leading: const Icon(Icons.house),
-        //       //   title: const Text(
-        //       //     'Teacher',
-        //       //     style: TextStyle(fontSize: 14),
-        //       //   ),
-        //       //   onTap: () {
-        //       //
-        //       //     Navigator.push(context, MaterialPageRoute(builder: (_)=>teacher_screen()));
-        //       //
-        //       //
-        //       //   },
-        //       // )
-        //       // ,ListTile(
-        //       //   leading: const Icon(Icons.house),
-        //       //   title: const Text(
-        //       //     'Students',
-        //       //     style: TextStyle(fontSize: 14),
-        //       //   ),
-        //       //   onTap: () {
-        //       //
-        //       //     Navigator.push(context, MaterialPageRoute(builder: (_)=>student_screen()));
-        //       //
-        //       //
-        //       //   },
-        //       // )
-        //       // ,
-        //       // ListTile(
-        //       //   leading: const Icon(Icons.house),
-        //       //   title: const Text(
-        //       //     'Result',
-        //       //     style: TextStyle(fontSize: 14),
-        //       //   ),
-        //       //   onTap: () {
-        //       //
-        //       //     Navigator.push(context, MaterialPageRoute(builder: (_)=>result()));
-        //       //
-        //       //
-        //       //   },
-        //       // ),
-        //       // ListTile(
-        //       //   leading: const Icon(Icons.apartment),
-        //       //   title: const Text(
-        //       //     'Attendance',
-        //       //     style: TextStyle(fontSize: 14),
-        //       //   ),
-        //       //   onTap: () {
-        //       //     Navigator.push(context, MaterialPageRoute(builder: (_)=>attendence()));
-        //       //
-        //       //   },
-        //       // ), ListTile(
-        //       //   leading: const Icon(Icons.apartment),
-        //       //   title: const Text(
-        //       //     'Announcements',
-        //       //     style: TextStyle(fontSize: 14),
-        //       //   ),
-        //       //   onTap: () {
-        //       //     Navigator.push(context, MaterialPageRoute(builder: (_)=>announcements()));
-        //       //
-        //       //
-        //       //   },
-        //       // ),ListTile(
-        //       //   leading: const Icon(Icons.apartment),
-        //       //   title: const Text(
-        //       //     'Assignments',
-        //       //     style: TextStyle(fontSize: 14),
-        //       //   ),
-        //       //   onTap: () {
-        //       //     Navigator.push(context, MaterialPageRoute(builder: (_)=>assignments()));
-        //       //
-        //       //   },
-        //       // ),
-        //       // ListTile(
-        //       //   leading: const Icon(Icons.logout),
-        //       //   title: const Text(
-        //       //     'Logout',
-        //       //     style: TextStyle(fontSize: 14),
-        //       //   ),
-        //       //   onTap: () async{
-        //       //     SharedPreferences prefs = await SharedPreferences.getInstance();
-        //       //
-        //       //     Navigator.push(context, MaterialPageRoute(builder: (_)=>login_screen()));
-        //       //
-        //       //   },
-        //       // ),
-        //       // Container(
-        //       //     // This align moves the children to the bottom
-        //       //     child: Align(
-        //       //         alignment: FractionalOffset.bottomCenter,
-        //       //         // This container holds all the children that will be aligned
-        //       //         // on the bottom and should not scroll with the above ListView
-        //       //         child: Container(
-        //       //           height: height / 10,
-        //       //           decoration: BoxDecoration(
-        //       //             color: Colors.black54,
-        //       //           ),
-        //       //         )))
-        //     ],
-        //   ),
-        // ),
-
         body: PageStorage(
           child: currentScreen,
           bucket: bucket,
         ),
-
         bottomNavigationBar: BottomAppBar(
           color: Colors.white,
           notchMargin: 5,
@@ -364,7 +146,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
                     minWidth: 20,
                     onPressed: () {
                       setState(() {
-                        currentScreen = const NotificationScreen();
+                        currentScreen = const NoticeScreen();
                         current_tab = 2;
                       });
                     },
@@ -377,7 +159,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
                             : Icon(Icons.notifications_active_outlined,
                                 color: AppColors.material),
                         Text(
-                          "Notifications",
+                          "Notices",
                           style: TextStyle(
                             fontSize: 12,
                             color: current_tab == 2
@@ -389,32 +171,6 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
                     ),
                   ),
                 ),
-                // MaterialButton(                    minWidth: 20,
-                //
-                //   onPressed: (){
-                //
-                //
-                //   },
-                //   child: Column(
-                //     mainAxisAlignment: MainAxisAlignment.center,
-                //     children: [
-                //
-                //       Padding(
-                //         padding: const EdgeInsets.only(top: 25.0),
-                //         child: Text(
-                //           "Best Aid",
-                //           style: GoogleFonts.lato(
-                //               fontSize: 18,
-                //               fontWeight: FontWeight.w600,
-                //
-                //               color: Colors.white
-                //           ),
-                //         ),
-                //       )
-                //     ],
-                //   ),
-                //
-                // ),
                 Container(
                   child: MaterialButton(
                     minWidth: 20,
@@ -447,45 +203,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
             ),
           ),
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       ),
     );
   }
 }
-
-
-// import 'package:flutter/material.dart';
-// import 'package:flutter_svg/flutter_svg.dart';
-
-// class CustomBottomNavigationBar extends StatelessWidget {
-//   const CustomBottomNavigationBar({
-//     Key? key,
-//   }) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return BottomNavigationBar(
-//       items: <BottomNavigationBarItem>[
-//         BottomNavigationBarItem(
-//           icon: SvgPicture.asset('assets/images/Vector.svg'),
-//           label: 'Overview',
-//         ),
-//         BottomNavigationBarItem(
-//           icon: Image.asset('assets/images/points.jpeg'),
-//           label: 'Points',
-//         ),
-//         BottomNavigationBarItem(
-//           icon: SvgPicture.asset('assets/images/ticket.svg'),
-//           label: 'Offers',
-//         ),
-//         BottomNavigationBarItem(
-//           icon: SvgPicture.asset('assets/images/settings.svg'),
-//           label: 'Settings',
-//         ),
-//       ],
-//       currentIndex: 1,
-//       selectedItemColor: const Color(0xff6347EB),
-//       // onTap: _onItemTapped,
-//     );
-//   }
-// }
